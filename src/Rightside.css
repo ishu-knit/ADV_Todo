@@ -1,0 +1,59 @@
+.right{
+    margin-left: 19px;
+    flex: 1;
+
+}
+.to_do{
+    height: 30rem;
+
+}
+
+.rightheading{
+    text-align: center;
+    margin: 20px;
+    font-size: 29px;
+    font-family: 'Sonsie One', cursive;
+    font-weight: bolder;
+
+}
+
+b{
+    font-size: 17px;
+}
+
+.item{
+    flex: 1;
+    background-color: rgb(241, 232, 232);
+    border: 2px black solid;
+    width: 20rem;
+
+}
+
+.status{
+    display: flex;
+}
+
+
+.project_block{
+    /* border: 2px solid red; */
+    border-bottom: 2px solid black;
+    background-color: rgb(242, 255, 240);
+    border-radius: 9px;
+    word-wrap: break-word;
+}
+
+
+.blinking-element{
+    color: red;
+    animation: blink 3s infinite;
+}
+
+@keyframes blink{
+    0% , 50% {
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

@@ -1,0 +1,50 @@
+
+.task_box{
+
+    align-items:center ;
+    border: 2px rgb(0, 0, 0) solid;
+    margin-top: 20px;
+    text-align: center;
+    width: 15rem;
+    margin-left: 5px;  
+    background-color: #FB61AD; 
+    background-image: linear-gradient(to right,#FB61AD,#514EA7 );
+     
+}
+
+.input-field{
+
+    border-top: 0;
+    border-left:0;
+    border-right: 0;
+    border-bottom:2px black solid;
+    outline: none;
+}
+
+
+
+.addbtn , .input-field , .exp{
+    margin: 10px;
+    background-color: transparent;
+    
+}
+
+
+.text{
+
+    font-weight: bolder;
+    font-size: large;
+}
+
+.task_box_close_btn{
+    cursor: pointer;
+    color: rgb(251, 8, 8);
+    text-align: right;
+   
+
+}
+
+
+
+
+

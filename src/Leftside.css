@@ -1,0 +1,53 @@
+
+.add_project_title{
+margin-top: 40px;
+}
+
+.add-projects{
+    border-top: 0;
+    border-left:0;
+    border-right: 0;
+    border-bottom:2px black solid;
+    outline: none;
+}
+
+
+
+
+.allproject{
+    margin-top: 20px;
+}
+
+
+
+.project_list{
+
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-weight: bold;
+}
+
+
+
+.delete , .show , .add-task{
+    
+    border: 0;
+    background-color:white;
+}
+
+.delete{
+    transition: transform(50ms);
+}
+
+.delete:hover{
+    transform: scale(1.08);
+}
+
+.show{
+    color: rgb(163, 161, 161);
+}
+
+.show:focus{
+    color: rgb(0, 0, 0);
+}
