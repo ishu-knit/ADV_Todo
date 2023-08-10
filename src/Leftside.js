@@ -4,8 +4,9 @@ import "./Leftside.css"
 import { Usercontext, showtaskbox, lga, globalprojectid } from './App';
 import Todo from './Todo';
 import { Delete } from '@mui/icons-material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 
+
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 const Leftside = () => {
 
@@ -73,11 +74,12 @@ const Leftside = () => {
   // activate add-Task
   function trigger(x) {
 
-    setShowtask(true)
+    setShowtask(!showtask)
     setProjectid(x)
     setgprojectid(x)
-
   }
+
+  
   return (
     <>
       <div className='left'>
@@ -91,23 +93,31 @@ const Leftside = () => {
               onChange={Words}
               maxLength="20"
               value={sen}
+
+              onKeyDown={(e)=>{
+                if(e.key==="Enter")
+                {Adding()}
+              }}
             ></input>
 
             <button style={{border:"0" , backgroundColor:"White" , outline:"None"}} onClick={Adding}>➕</button>
+            <div style={{position:"absolute" , left:"0px" , zIndex:"2" } } >
+            {showtask && <Todo projid={projectid} />}
+            </div>
             <div className='allproject'>
               {la.map((ele, ind) => {
                 return (
                   <>
-                    <div className='project_list'>
+                    <div className='project_list' key={ind+10} onClick={() => setgprojectid(ele[1])}>
+                    <div className="creating_pointer">
+                     <AssignmentIcon/> {ele[0]}
 
+                    </div>  
+                    
+                    
                     <div>
-                      {ele[0]}
-                    </div>
 
-                    <div>
-
-                      <button className='add-task' onClick={() => trigger(ele[1])} >Add-Task</button>
-                      <button className='show' onClick={() => setgprojectid(ele[1])}><VisibilityIcon/></button>
+                      <button className='add-task' onClick={() => {trigger(ele[1])}} >Add-Task</button>
                       <button className='delete' onClick={() => remove(ele[1])} ><Delete style={{color:"red"}}/></button>
                     </div>
 
@@ -119,7 +129,10 @@ const Leftside = () => {
             </div>
           </div>
         </div>
-        {showtask && <Todo projid={projectid} />}
+      
+      {/* iniiatlly taskbox todo is here */}
+        
+        
       </div>
     </>
   )}

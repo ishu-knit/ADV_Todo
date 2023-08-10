@@ -1,16 +1,17 @@
 
 .task_box{
 
-    align-items:center ;
+    background-color: rgb(255, 255, 255);
     border: 2px rgb(0, 0, 0) solid;
     margin-top: 20px;
     text-align: center;
     width: 15rem;
-    margin-left: 5px;  
-    background-color: #FB61AD; 
-    background-image: linear-gradient(to right,#FB61AD,#514EA7 );
-     
+    margin-left: 5rem;  
+
 }
+
+
+
 
 .input-field{
 
@@ -26,7 +27,6 @@
 .addbtn , .input-field , .exp{
     margin: 10px;
     background-color: transparent;
-    
 }
 
 

@@ -1,7 +1,11 @@
 
+
 .add_project_title{
 margin-top: 40px;
+text-align: center;
+
 }
+
 
 .add-projects{
     border-top: 0;
@@ -9,45 +13,47 @@ margin-top: 40px;
     border-right: 0;
     border-bottom:2px black solid;
     outline: none;
+    margin-bottom: 40px;
 }
-
-
-
 
 .allproject{
-    margin-top: 20px;
-}
-
-
+    margin-top: 20px;}
 
 .project_list{
 
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin: 9px;
     font-weight: bold;
+    width: 20rem;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
 }
 
 
+.creating_pointer{
 
+    cursor: pointer;
+    /* tea */
+}
 .delete , .show , .add-task{
     
     border: 0;
     background-color:white;
 }
 
-.delete{
-    transition: transform(50ms);
-}
 
-.delete:hover{
+.delete:hover , .creating_pointer:hover{
     transform: scale(1.08);
 }
 
-.show{
-    color: rgb(163, 161, 161);
-}
+
+
 
 .show:focus{
     color: rgb(0, 0, 0);
+}
+
+h3{
+    text-align: center;
 }

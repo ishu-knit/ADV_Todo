@@ -1,5 +1,5 @@
 import "./Todo.css"
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState  } from 'react'
 import { Usercontext , showtaskbox} from './App';
 
 import { lga } from "./App";
@@ -8,6 +8,8 @@ import { lga } from "./App";
 
 function Todo(props) {
 
+
+const ran = Math.floor(Math.random()*100)
 
 
 // props  it contain selected project id 
@@ -49,6 +51,7 @@ function Todo(props) {
 
     const memo =
     {
+      id:ran,
       title: title,
       description: description,
       status: progress,
@@ -74,13 +77,20 @@ function Todo(props) {
   }
   }
 
+
+
+
+
+
+
+
+  
+
   return (
     <>
-      <div>
-      <div className="task_box">
-
-        <div className="task_box_heading">
+      <div className= "task_box">
         
+        <div className="task_box_heading">
         <div  className="task_box_close_btn"  onClick={()=>setShowtask(false)}>❌</div>
         <div className="text"> <b>Task</b>  </div>
         
@@ -110,7 +120,7 @@ function Todo(props) {
            </button>
         </div>
       </div>
-      </div>
+   
     </>
   )
 }

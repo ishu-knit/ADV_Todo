@@ -1,15 +1,25 @@
 .right{
     margin-left: 19px;
     flex: 1;
+    border-left: 4px solid #ede9e9
 
 }
 .to_do{
     height: 30rem;
+  
+}
 
+.searching input{
+    margin: 10px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;  
+    outline: none;
 }
 
 .rightheading{
     text-align: center;
+    text-decoration:underline;
     margin: 20px;
     font-size: 29px;
     font-family: 'Sonsie One', cursive;
@@ -23,10 +33,12 @@ b{
 
 .item{
     flex: 1;
-    background-color: rgb(241, 232, 232);
-    border: 2px black solid;
-    width: 20rem;
+    background-color: #EDF2F2;
 
+    width: 20rem;
+    border: none;
+    margin: 10px;
+    border-radius: 12px;
 }
 
 .status{
@@ -35,13 +47,25 @@ b{
 
 
 .project_block{
-    /* border: 2px solid red; */
+    background-color: aliceblue;
     border-bottom: 2px solid black;
-    background-color: rgb(242, 255, 240);
     border-radius: 9px;
     word-wrap: break-word;
+    margin-bottom: 10px;
 }
 
+
+.project_block .title{
+text-align: center;
+margin-bottom: 3px;
+font-size: 18px;
+}
+
+.project_block .description{
+    padding-left: 10px;
+    margin-bottom: 5px;
+    color:#8c898d
+}
 
 .blinking-element{
     color: red;
