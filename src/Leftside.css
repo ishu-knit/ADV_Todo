@@ -1,9 +1,7 @@
 
 
 .add_project_title{
-margin-top: 40px;
-text-align: center;
-
+/* margin-top: 40px; */
 }
 
 
@@ -13,7 +11,8 @@ text-align: center;
     border-right: 0;
     border-bottom:2px black solid;
     outline: none;
-    margin-bottom: 40px;
+    margin-top: 55px;
+    margin-bottom: 10px;
 }
 
 .allproject{
@@ -32,18 +31,21 @@ text-align: center;
 
 
 .creating_pointer{
-
     cursor: pointer;
-    /* tea */
+    
+
 }
 .delete , .show , .add-task{
-    
     border: 0;
     background-color:white;
+    transition: transform 0.5s ease;
+
 }
 
 
-.delete:hover , .creating_pointer:hover{
+
+
+.delete:hover , .creating_pointer:hover , .add-task:hover{
     transform: scale(1.08);
 }
 
@@ -55,5 +57,6 @@ text-align: center;
 }
 
 h3{
+    /* font-size: xx-large; */
     text-align: center;
 }

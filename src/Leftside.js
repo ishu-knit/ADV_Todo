@@ -33,7 +33,7 @@ const Leftside = () => {
   else {x = 
     <h3>
 
-      Add new projects
+      Projects
     </h3>
   }
 
@@ -118,7 +118,7 @@ const Leftside = () => {
                     <div>
 
                       <button className='add-task' onClick={() => {trigger(ele[1])}} >Add-Task</button>
-                      <button className='delete' onClick={() => remove(ele[1])} ><Delete style={{color:"red"}}/></button>
+                      <Delete className='delete'  style={{color:"red" , fontSize:"20px"}} onClick={() => remove(ele[1])}   />   
                     </div>
 
                     

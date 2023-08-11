@@ -92,7 +92,7 @@ const ran = Math.floor(Math.random()*100)
         
         <div className="task_box_heading">
         <div  className="task_box_close_btn"  onClick={()=>setShowtask(false)}>❌</div>
-        <div className="text"> <b>Task</b>  </div>
+        <div className="text"> Task  </div>
         
         </div>
 
@@ -116,7 +116,7 @@ const ran = Math.floor(Math.random()*100)
         </div>
 
         <div >
-          <button className="addbtn" onClick={Add}>Add To {y[0][0]}
+          <button className="addbtn" onClick={Add}>Add To  <b>{y[0][0]}</b>
            </button>
         </div>
       </div>

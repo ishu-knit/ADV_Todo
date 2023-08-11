@@ -27,13 +27,14 @@
 .addbtn , .input-field , .exp{
     margin: 10px;
     background-color: transparent;
+
 }
 
 
 .text{
-
-    font-weight: bolder;
-    font-size: large;
+   font-weight: bolder;
+    font-size: 22px;
+    margin-bottom: 22px;
 }
 
 .task_box_close_btn{
@@ -44,7 +45,13 @@
 
 }
 
+.addbtn{
+    transition: background-color 0.7s ease;
+}
 
 
+.addbtn:hover{
+    color: aliceblue;
+    background-color: black;
 
-
+}

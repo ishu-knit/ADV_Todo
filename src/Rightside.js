@@ -151,7 +151,21 @@ function search(e) {
         setfilter_arr(garr)}
                     }
 
+// for style
 
+const getliststyle=(e)=>(
+    
+{
+
+padding:"8px",
+border:e?"dotted":"0",
+borderColor:e?"grey":"",
+borderRadius:e?"9px":"",
+
+
+}
+)
+                    
 
 
 const todos = filter_arr.filter((ele)=>(ele.status === "todo" && ele.projectid === gprojectid))
@@ -209,14 +223,18 @@ const completes = filter_arr.filter((ele)=>(ele.status === "completed" && ele.pr
 
 
                                             <Droppable droppableId="todoid" >
-                                                {(Provided) => (
-                                                    <div {...Provided.droppableProps} ref={Provided.innerRef}>
+                                                {(Provided ,snapshot) => (
+                                                    <div {...Provided.droppableProps} ref={Provided.innerRef} style={getliststyle(snapshot.isDraggingOver)}>
                                                     
                                                          {todos.map((ele, ind) => {
                                                                 return (<>
                                                                     <Draggable draggableId={ele.id.toString()} key={ele.id} index={ele.id}>
                                                                         {(Provided) => (
-                                                                            <div className="project_block"  {...Provided.dragHandleProps}  {...Provided.draggableProps} ref={Provided.innerRef}>
+                                                                            <div className="project_block"  
+                                                                            {...Provided.dragHandleProps}  
+                                                                            {...Provided.draggableProps} 
+                                                                            ref={Provided.innerRef} 
+                                                                             >
 
                                                                                 {ele.title}
                                                                                 
@@ -258,9 +276,9 @@ const completes = filter_arr.filter((ele)=>(ele.status === "completed" && ele.pr
                                         <div >
 
                                             <Droppable droppableId="progressid" >
-                                                {(Provided) => (
+                                                {(Provided,snapshot) => (
 
-                                                    <div {...Provided.droppableProps} ref={Provided.innerRef}  >
+                                                    <div {...Provided.droppableProps} ref={Provided.innerRef} style={getliststyle(snapshot.isDraggingOver)} >
 
                                                         {progresses.map((ele, ind) => {
 
@@ -313,11 +331,11 @@ const completes = filter_arr.filter((ele)=>(ele.status === "completed" && ele.pr
                                             </div>
                                         </div>
                                         <div >
-                                            <Droppable droppableId="completedid">
-                                                {(provide) => (
+                                            <Droppable droppableId="completedid" >
+                                                {(provide,snapshot) => (
 
 
-                                                    <div {...provide.droppableProps} ref={provide.innerRef} >
+                                                    <div {...provide.droppableProps} ref={provide.innerRef} style={getliststyle(snapshot.isDraggingOver)} >
 
                                                         {completes.map((ele, ind) => {
 
